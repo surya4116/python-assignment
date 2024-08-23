@@ -1,0 +1,9 @@
+def sort_and_replace_negatives(numbers):
+    non_negative_numbers = [num for num in numbers if num >= 0]
+    average = sum(non_negative_numbers) / len(non_negative_numbers) if non_negative_numbers else 0
+    modified_numbers = [num if num >= 0 else average for num in numbers]
+    modified_numbers.sort()
+    return modified_numbers
+numbers = [3, -1, 4, -2, 5]
+sorted_numbers = sort_and_replace_negatives(numbers)
+print(sorted_numbers)
