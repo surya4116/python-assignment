@@ -1,0 +1,7 @@
+def sumsquare(l):
+    odd = sum(x**2 for x in l if x % 2 != 0)
+    even = sum(x**2 for x in l if x % 2 == 0)
+    return [odd, even]
+l = [18, 9, 1, 12, 13, 4, 30]
+result = sumsquare(l)
+print(result)  
